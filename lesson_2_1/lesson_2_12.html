@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.12</title> <!-- Оператор switch-case -->
+    <script>
+        "use strict";  //включение "строго режима"
+        
+        // 1) Через prompt() получите от пользователя число от 1 до 5.
+        let user_number = +prompt('Введите число от 1 до 5')
+
+
+        // 2) С помощью switch-case выведите строковое представление введённого числа в консоль. Например, если пользователь ввёл число 3, надо вывести «три», если 5, то надо вывести «пять».
+        switch(user_number) {
+            case 1:
+                console.log('один');
+                break;
+            case 2:
+                console.log('два');
+                break;
+            case 3:
+                console.log('три');
+                break;
+            case 4:
+                console.log('четыре');
+                break;
+            case 5:
+                console.log('пять');
+                break;
+            //выполнение задания 3
+                default:
+                alert('Нет представления этого числа в виде строки');
+                break;
+        }
+
+
+        // 3) Если пользователь делает ввод числа, представления для которого у Вас нет, надо вывести строку: «Нет представления этого числа в виде строки».
+    </script>
+</head>
+<body>
+</body>
+</html>
