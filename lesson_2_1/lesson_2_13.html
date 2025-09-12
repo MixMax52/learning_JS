@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.13</title> <!-- Функции -->
+    <script>
+        "use strict";  //включение "строго режима"
+        
+        // 1) Возьмите код из предыдущего упражнения за основу, и оформите его в виде функции. Сделайте переменную от пользователя в виде параметра функции. Строковый результат сделайте через return. Например: return «Пять»;
+        let user_number = +prompt('Введите число от 1 до 5');
+        //console.log(typeof(user_number))
+        function enterNumber(user_number) {
+            switch(user_number) {
+                case 1:
+                    return console.log('Один');
+                case 2:
+                    return console.log('Два');
+                case 3:
+                    return console.log('Три');
+                case 4:
+                    return console.log('Четыре');
+                case 5:
+                    return console.log('Пять');
+                default:
+                alert('Нет представления этого числа в виде строки');
+                break;
+                }
+        }
+
+        enterNumber(user_number);
+    </script>
+</head>
+<body>
+</body>
+</html>
