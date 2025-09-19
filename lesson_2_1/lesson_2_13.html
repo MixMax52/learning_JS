@@ -34,6 +34,7 @@
 
         while(true) {
             let some_input = +prompt('Введите число от 1 до 5');
+            checkInput(some_input); //
                 if (some_input === Number(-1)) break
                 else if (some_input != Number(some_input))
                 {
@@ -43,7 +44,7 @@
                 else  {alert(enterNumber(some_input))}
         }
 
-        enterNumber();
+        // enterNumber();
 
 
         // 3) Если пользователь вводит -1, то должен произойти выход из цикла (через break).
@@ -52,6 +53,10 @@
 
         // 5) Сделайте проверку корректности ввода в виде отдельной функции, возвращающей true (если ввод корректный) или false (если ввод некорректный).
 
+        function checkInput(param) {
+            if (param == Number(param)) alert('true')
+            else alert('false')
+        }
 
     </script>
 </head>
