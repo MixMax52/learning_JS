@@ -15,8 +15,8 @@
 
         function func(a, b) {
             try {
-                if (typeof(a) != typeof(1)) throw new FirstError('Ошибка данных для первой переменной');
-                else if (typeof(b) != typeof(1)) throw new SecondError('Ошибка данных для второй переменной');
+                if (typeof(a) != typeof(1)) throw new Error('Ошибка данных для первой переменной');
+                else if (typeof(b) != typeof(1)) throw new Error('Ошибка данных для второй переменной');
                 else {
                     return console.log(a + b)
                 }
@@ -24,6 +24,7 @@
             catch(e) {
                 error('Были переданы некорректные параметры')
                 console.log('Ошибка: ' + e.name)
+                error(e)
             }
             // 2) Добавьте блок finally, где выведите в консоль строку: «Завершаем выполнение функции».
             finally {
@@ -31,7 +32,7 @@
             }
         }
 
-        func(10, 'a')
+        func(10, '5')
     </script>
 </head>
 <body>
