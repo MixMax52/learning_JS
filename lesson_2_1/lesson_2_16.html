@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2.16</title> <!-- Обработка ошибок через try-catch -->
+    <script>
+        "use strict";  //включение "строго режима"
+        
+        // 1) Перепишите упражнение из предыдущего урока, но так, чтобы если пользователь ввёл некорректные данные, то выбрасывалось исключение. И уже в блоке catch вызовите функцию error.
+
+        function error(msg) {
+            console.log(msg)
+        }
+
+        function func(a, b) {
+            try {
+                if (typeof(a) != typeof(1)) throw new FirstError('Ошибка данных для первой переменной');
+                else if (typeof(b) != typeof(1)) throw new SecondError('Ошибка данных для второй переменной');
+                else {
+                    return console.log(a + b)
+                }
+            }
+            catch(e) {
+                error('Были переданы некорректные параметры')
+                console.log('Ошибка: ' + e.name)
+            }
+            // 2) Добавьте блок finally, где выведите в консоль строку: «Завершаем выполнение функции».
+            finally {
+                console.log('Завершаем выполнение функции')
+            }
+        }
+
+        func(10, 'a')
+    </script>
+</head>
+<body>
+</body>
+</html>
